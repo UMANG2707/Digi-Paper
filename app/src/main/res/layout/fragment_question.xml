@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayLight"
+    tools:context=".QuestionFragment">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.25"
+        android:background="@drawable/gradient"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-16dp"></View>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="8dp"
+        android:background="#ffffff"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:divider="#000000"
+        android:dividerHeight="1px"
+        android:elevation="10dp"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="15dp"
+        app:cardPreventCornerOverlap="true"
+        app:contentPadding="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <!--            <LinearLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="50dp"-->
+        <!--                android:orientation="horizontal"-->
+        <!--                android:gravity="center_horizontal">-->
+        <!--                <TextView-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:hint="current"-->
+        <!--                    android:textSize="20dp"-->
+        <!--                    />-->
+        <!--                <TextView-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:hint="/"-->
+        <!--                    android:textSize="20dp"-->
+        <!--                    />-->
+        <!--                <TextView-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:hint="total"-->
+        <!--                    android:textSize="20dp"-->
+        <!--                    />-->
+        <!--            </LinearLayout>-->
+
+        <TextView
+            android:id="@+id/txt_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
+            android:hint="Question"
+
+
+            />
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"></View>
+
+
+    <RadioGroup
+        android:id="@+id/options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        tools:ignore="MissingConstraints">
+
+        <RadioButton
+            android:id="@+id/optionA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/roundable"
+            android:buttonTint="@color/white"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        <RadioButton
+            android:id="@+id/optionB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/roundable"
+            android:buttonTint="@color/white"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        <RadioButton
+            android:id="@+id/optionC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/roundable"
+            android:buttonTint="@color/white"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        <RadioButton
+            android:id="@+id/optionD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/roundable"
+            android:buttonTint="@color/white"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+    </RadioGroup>
+
+    <!--                <Button-->
+    <!--                    android:id="@+id/back"-->
+    <!--                    android:layout_width="70dp"-->
+    <!--                    android:layout_height="40dp"-->
+    <!--                    android:layout_marginRight="20dp"-->
+    <!--                    android:layout_marginTop="10dp"-->
+    <!--                    android:layout_marginLeft="20dp"-->
+    <!--                    android:background="@drawable/button_bg_rounded_corners"-->
+    <!--                    android:hapticFeedbackEnabled="true"-->
+    <!--                    android:padding="3dp"-->
+    <!--                    android:text="back"-->
+    <!--                    android:textAllCaps="false"-->
+    <!--                    android:textColor="#000000"-->
+    <!--                    android:textSize="17sp"-->
+    <!--                    android:textStyle="bold" />-->
+
+    <!--                <Button-->
+    <!--                    android:id="@+id/next"-->
+    <!--                    android:layout_width="70dp"-->
+    <!--                    android:layout_height="40dp"-->
+    <!--                    android:layout_marginRight="20dp"-->
+    <!--                    android:layout_marginTop="10dp"-->
+    <!--                    android:layout_marginLeft="20dp"-->
+    <!--                    android:background="@drawable/button_bg_rounded_corners"-->
+    <!--                    android:hapticFeedbackEnabled="true"-->
+    <!--                    android:padding="3dp"-->
+    <!--                    android:text="next"-->
+    <!--                    android:textAllCaps="false"-->
+    <!--                    android:textColor="#000000"-->
+    <!--                    android:textSize="17sp"-->
+    <!--                    android:textStyle="bold" />-->
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

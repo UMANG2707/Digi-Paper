@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.app3">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Digi-MCQ"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".StudentResult"></activity>
+        <activity android:name=".Quiz_solution" />
+        <activity android:name=".TeacherResult"/>
+        <activity android:name=".Mcq_upload" />
+        <activity android:name=".teacher_profile" />
+        <activity android:name=".Student_profile" />
+        <activity android:name=".Mcq_Quiz" />
+        <activity android:name=".teacher_activity" />
+        <activity android:name=".student_dashboard" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme_without_actionbar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
